@@ -1,0 +1,52 @@
+<nav class="container">
+
+    <small>Cards por página</small>
+    <div class="svgContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="iconoMinus" viewBox="0 0 120 120" width="24px" height="24px" baseProfile="basic" (click)="dec()">
+            <path d="M110.214,13.786c-2.343-2.343-6.142-2.343-8.485,0L8.996,106.52l2.033,2.033l-3.238,3.238 l4.242,4.242l3.238-3.238l2.209,2.209l92.734-92.733C112.557,19.928,112.557,16.129,110.214,13.786z" opacity=".35"/>
+            <path class="sable-laser" fill="#0078FF" d="M17.48,111.004l-8.484-8.484l92.733-92.734c2.343-2.343,6.142-2.343,8.485,0l0,0 c2.343,2.343,2.343,6.142,0,8.485L17.48,111.004z"/>
+            <rect width="9.899" height="5.999" x="8.462" y="103.412" fill="#0037ff" transform="rotate(-45.001 13.411 106.413)"/>
+            <rect width="7.999" height="12.265" x="22.164" y="81.031" fill="#0037ff" transform="rotate(-45.001 26.163 87.164)"/>
+            <polygon fill="#000000" points="46.037,65.479 8.996,102.52 17.48,111.004 46.037,82.448"/>
+            <rect width="7.999" height="11.994" x="31.145" y="78.839" fill="#a4e2f1" transform="rotate(-45.001 35.144 84.837)"/>
+        </svg>
+    </div>
+    
+    <input class="input" [value]="itemsPerPage">
+    <div class="svgContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="iconoPlus" viewBox="0 0 120 120" width="24px" height="24px" baseProfile="basic" (click)="inc()" >
+            <path d="M110.214,13.786c-2.343-2.343-6.142-2.343-8.485,0L8.996,106.52l2.033,2.033l-3.238,3.238 l4.242,4.242l3.238-3.238l2.209,2.209l92.734-92.733C112.557,19.928,112.557,16.129,110.214,13.786z" opacity=".35"/>
+            <path class="sable-laser" fill="#0078FF" d="M17.48,111.004l-8.484-8.484l92.733-92.734c2.343-2.343,6.142-2.343,8.485,0l0,0 c2.343,2.343,2.343,6.142,0,8.485L17.48,111.004z"/>
+            <rect width="9.899" height="5.999" x="8.462" y="103.412" fill="#0037ff" transform="rotate(-45.001 13.411 106.413)"/>
+            <rect width="7.999" height="12.265" x="22.164" y="81.031" fill="#0037ff" transform="rotate(-45.001 26.163 87.164)"/>
+            <polygon fill="#000000" points="46.037,65.479 8.996,102.52 17.48,111.004 46.037,82.448"/>
+            <rect width="7.999" height="11.994" x="31.145" y="78.839" fill="#a4e2f1" transform="rotate(-45.001 35.144 84.837)"/>
+        </svg>
+    </div>
+    <div class="paginationContainer">
+        
+        <pagination-controls
+            class="miPaginacion"
+            (pageChange)="p = $event"
+            previousLabel="Anterior"
+            nextLabel="Siguiente"
+            screenReaderPaginationLabel="Paginación"
+            screenReaderPageLabel="Página"
+            screenReaderCurrentLabel="Página actual">
+        </pagination-controls>
+    </div> 
+    
+</nav>
+
+<main class="row g-2 mb-2">
+    @for(usuario of arrayUsers 
+    | paginate: { itemsPerPage: itemsPerPage, currentPage: p }; 
+    track usuario._id) {
+        <article class="col-12 col-md-6 col-lg-4 mt-5">
+            <app-usuario-card [miUser]="usuario"></app-usuario-card>
+        </article>
+    }
+    @empty {
+        <h1>No hay nada</h1>
+    }
+</main>

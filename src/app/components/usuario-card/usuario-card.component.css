@@ -1,0 +1,79 @@
+/*Recurso extraído de https://codepen.io/ebekirbayar/pen/pxbqmm*/
+.card{
+    background-color: #B89C5C;
+}
+
+.profile-card-4 .card-img-block {
+    float: left;
+    width: 100%;
+    height: 150px;
+    padding: 2px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), 
+                -4px -4px 10px rgba(255, 255, 255, 0.2), 
+                inset 2px 2px 5px rgba(255, 255, 255, 0.3), 
+                inset -2px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card-4 .card-body {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('/assets/images/stars.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #B89C5C;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), 
+        -4px -4px 10px rgba(255, 255, 255, 0.2), 
+        inset 2px 2px 5px rgba(255, 255, 255, 0.3), 
+        inset -2px -2px 5px rgba(0, 0, 0, 0.2);
+    padding-top: 70px;
+}
+.profile-card-4 .profile {
+    border-radius: 50%;
+    position: absolute;
+    top: -62px;
+    left: 50%;
+    width: 100px;
+    border: 5px solid #0078FF;
+    margin-left: -50px;
+    background-color: #1a1a1a;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), 
+                -4px -4px 10px rgba(255, 255, 255, 0.2), 
+                inset 2px 2px 5px rgba(255, 255, 255, 0.3), 
+                inset -2px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card-4 .card-img-block > .info-box {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    color: #B89C5C;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Orbitron', sans-serif;
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.profile-card-4 .card-img-block:hover > .info-box {
+    opacity: 1;
+}
+
+.profile-card-4 h5 {
+    font-weight: 600;
+    color: #1D57A6;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 3px rgba(29, 87, 166, 0.5);
+}
+
+.profile-card-4 .card-text {
+    font-weight: 400;
+    font-size: 15px;
+    color: rgba(179, 161, 37, 0.6);
+    font-family: 'Orbitron', sans-serif;
+}

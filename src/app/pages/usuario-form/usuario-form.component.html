@@ -1,0 +1,76 @@
+<div class="registration-form">
+    <h1 class="text-center mb-3">{{tipo}} {{afiliado}}</h1>
+    <form [formGroup]="usersForm" (ngSubmit)="getDataForm()" class="needs-validation" novalidate>
+        <div class="container">
+            	<div class="form-icon">
+    			<span>
+        			<img [src]="miUser && miUser.image ? miUser.image : '/assets/images/rebel.svg'" class="icon icon-user">
+    			</span>
+		</div>
+            
+            <div class="row">
+
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="first_name" placeholder="Nombre" formControlName="first_name" autocomplete="off">
+
+                    @if(checkControl('first_name', 'required')){
+                        <p class="error">Campo requerido</p>
+                    }
+                    @if (checkControl('first_name', 'minlength')) {
+                        <p class="error">El nombre debe de tener 4 caracteres</p>
+                    }
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="last_name" placeholder="Apellidos" formControlName="last_name" autocomplete="off">
+                    @if(checkControl('last_name', 'required')){
+                        <p class="error">Campo requerido</p>
+                    }
+                    @if (checkControl('last_name', 'minlength')) {
+                        <p class="error">El apellido debe de tener 4 caracteres</p>
+                    }
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="username" placeholder="Username" formControlName="username" autocomplete="off">
+                    @if(checkControl('username', 'required')){
+                        <p class="error">Campo requerido</p>
+                    }
+                    @if (checkControl('username', 'minlength')) {
+                        <p class="error">El username debe de tener 4 caracteres</p>
+                    }
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email" autocomplete="off">
+                    @if(checkControl('username', 'required')){
+                        <p class="error">Campo requerido</p>
+                    }
+                    @if(checkControl('email', 'pattern')){
+                        <p class="error">La estructura del email es incorrecta</p>
+                    }
+
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="password" placeholder="Contraseña" formControlName="password" autocomplete="off">
+                    @if(checkControl('password', 'required')){
+                        <p class="error">Campo requerido</p>
+                    }
+                    @if(checkControl('password','minlength')){
+                        <p class="error">La contraseña debe de tener al menos 5 caracteres</p>
+                    }
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="image" placeholder="Imagen de perfil" formControlName="image" autocomplete="off">
+                    @if(checkControl('username', 'required')){
+                        <p class="error">Campo requerido</p>
+                    }
+                    @if(checkControl('image', 'pattern')){
+                        <p class="error">La estructura de la imagen es incorrecta</p>
+                    }
+                </div>
+                <div class="d-flex mt-5">
+                    <input type="submit" value="Guardar" class="btn btnSucces" [disabled]="!usersForm.valid">
+                    <a [routerLink]="['/users']" class="btn btnBack">Volver</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

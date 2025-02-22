@@ -1,0 +1,27 @@
+<main class="dark">
+    <article class="postcard dark">
+        <a class="postcard__img_link" href="#">
+            <img class="postcard__img" [src]="miUser.image" alt="Imagen de {{miUser.first_name}} {{miUser.last_name}}" />
+        </a>
+
+        <div class="postcard__text">
+            <h1 class="postcard__title blue">{{miUser.first_name}} {{miUser.last_name}}</h1>
+
+            <div class="postcard__subtitle small">
+                <small class="mr-2">{{miUser.email}}</small>
+            </div>
+
+            <div class="postcard__bar"></div>
+
+            <div class="postcard__preview-txt">
+                <p class="mr-2"><strong>ID:</strong> {{miUser.id}}</p>
+                <p class="mr-2"><strong>Username:</strong> {{miUser.username}}</p>
+                <p class="mr-2"><strong>Password:</strong> {{miUser.password}}</p>
+            </div>
+
+            <div class="icon-block text-center mt-5">
+                <app-botonera [parent]="'view'" [_id]="miUser._id"></app-botonera>
+            </div>
+        </div>
+    </article>
+</main>

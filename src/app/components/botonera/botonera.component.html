@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="group-container">
+    <div class="multi-button">
+      @if(parent == 'card'){
+        <a [routerLink]="['/users', _id]" class="jediBlueSaber">Detalle</a>
+      }
+      @else if(parent == 'view'){
+        <a [routerLink]="['/users']" class="jediBlueSaber">Volver</a>
+      }
+      <a [routerLink]="['/actualizar', 'user', _id]" class="jediGreenSaber">Actualizar</a>
+      <a  (click)="eliminarUser(_id)" class="sithSaber">Eliminar</a>
+    </div>
+  </div>
+</div>

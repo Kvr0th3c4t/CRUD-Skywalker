@@ -1,0 +1,119 @@
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('/assets/images/aesthetic-galaxy-black-background.jpg');  
+    background-size: cover;  
+    background-position: center center;  
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 85vh;
+}
+
+.star-wars-popup {
+    border: 2px solid #FFE81F; 
+    border-radius: 10px; 
+    padding: 20px; 
+    font-family: 'Star Jedi', sans-serif;
+}
+
+.star-wars-title {
+    color: #0078FF; 
+    font-size: 2rem;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 1);
+}
+
+.star-wars-text {
+    color: #FFD700; 
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 1);
+}
+
+button {
+    text-decoration: none;
+    outline: 0;
+    font-weight: 550;
+    background: transparent;
+    min-width: 100px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 11px;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.jediBlueSaber {
+    border: 2px solid #0078FF;
+    color: #0078FF;
+    background-color: #002050;
+}
+
+.jediBlueSaber:hover,
+.jediBlueSaber:focus {
+    border-color: #3390FF;
+    color: #3390FF;
+    background-color: #003080;
+}
+
+.jediGreenSaber {
+    border: 2px solid #32FF32;
+    color: #32FF32;
+    background-color: #0F3C0F;
+}
+
+.jediGreenSaber:hover,
+.jediGreenSaber:focus {
+    border-color: #66FF66;
+    color: #66FF66;
+    background-color: #1A5820;
+}
+
+.sithSaber {
+    border: 2px solid #ff2b2b;
+    color: #ff2b2b;
+    background-color: #500A0A;
+}
+
+.sithSaber:hover,
+.sithSaber:focus {
+    border-color: #FF5555;
+    color: #FF5555;
+    background-color: #700F0F;
+}
+
+.star-wars-button:hover {
+    background-color: #FFD700; 
+}
+
+.star-wars-button:hover {
+    background-color: #FFD700; 
+}
+
+.paginationContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ngx-pagination {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    color: #B89C5C;
+    text-shadow: 0 0 3px rgba(179, 161, 37, 0.5);
+}

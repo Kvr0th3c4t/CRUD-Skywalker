@@ -1,0 +1,20 @@
+<!-- Recurso extraído de https://codepen.io/ebekirbayar/pen/pxbqmm -->
+
+<div class="container">
+    <div class="card profile-card-4">
+        <div class="card-img-block">
+            <div class="info-box">
+                {{ textoAleatorio }}
+            </div>
+            <img class="img-fluid" [src]="imagenSrc" [alt]="imagenAlt">
+        </div>
+        <div class="card-body pt-5">
+            <img [src]="miUser.image" alt="profile-image" class="profile" />
+            <h5 class="card-title text-center">{{miUser.first_name}} {{miUser.last_name}}</h5>
+            <p class="card-text text-center">{{miUser.email}}</p>
+            <div class="icon-block text-center">
+                <app-botonera [parent]="'card'" [_id]="miUser._id"></app-botonera>
+            </div>
+        </div>
+    </div>
+</div>

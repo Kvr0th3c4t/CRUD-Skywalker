@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,800&display=swap');
+
+* {
+    font-family: 'Muli', sans-serif;
+}
+
+a::-moz-focus-inner {
+    border: 0;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+.group-container {
+    height: 50px;
+    display: grid;
+    place-items: center;
+    justify-items: center;
+}
+
+.multi-button {
+    font-size: 0;
+}
+
+a,button {
+    text-decoration: none;
+    outline: 0;
+    font-weight: 550;
+    background: transparent;
+    min-width: 100px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 11px;
+    display: inline-block;
+    padding: 2px 5px; 
+    margin: 0 3px 0 0;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+a:first-of-type, button:first-of-type {
+    border-radius: 20px 8px 8px 20px;
+}
+
+a:last-of-type, button:last-of-type {
+    border-radius: 8px 20px 20px 8px;
+}
+
+
+.jediBlueSaber {
+    border: 2px solid #0078FF;
+    color: #0078FF;
+    background-color: #002050;
+}
+
+.jediBlueSaber:hover,
+.jediBlueSaber:focus {
+    border-color: #3390FF;
+    color: #3390FF;
+    background-color: #003080;
+}
+
+.jediBlueSaber:focus {
+    padding: 16px 16px;
+    outline: 0;
+    border-radius: 12px;
+    }
+
+.jediBlueSaber:focus:first-of-type {
+    border-radius: 30px 12px 12px 30px;
+}
+
+.jediBlueSaber:focus:last-of-type {
+    border-radius: 12px 30px 30px 12px;
+}
+
+
+.jediGreenSaber {
+    border: 2px solid #32FF32;
+    color: #32FF32;
+    background-color: #0F3C0F;
+}
+
+.jediGreenSaber:hover,
+.jediGreenSaber:focus {
+    border-color: #66FF66;
+    color: #66FF66;
+    background-color: #1A5820;
+}
+
+.jediGreenSaber:focus {
+    padding: 16px 16px;
+    outline: 0;
+    border-radius: 12px;
+}
+
+.jediGreenSaber:focus:first-of-type {
+    border-radius: 30px 12px 12px 30px;
+}
+
+.jediGreenSaber:focus:last-of-type {
+    border-radius: 12px 30px 30px 12px;   
+}
+
+.sithSaber {
+    border: 2px solid #ff2b2b;
+    color: #ff2b2b;
+    background-color: #500A0A;
+}
+
+.sithSaber:hover,
+.sithSaber:focus {
+    border-color: #FF5555;
+    color: #FF5555;
+    background-color: #700F0F;
+}
+
+.sithSaber:focus {
+    padding: 16px 16px;
+    outline: 0;
+    border-radius: 12px;
+}
+
+.sithSaber:focus:first-of-type {
+    border-radius: 30px 12px 12px 30px;
+}
+
+.sithSaber:focus:last-of-type {
+    border-radius: 12px 30px 30px 12px;
+}
+
+@media only screen and (max-width: 767px) {
+    a {
+    min-width: 80px;
+}
+
+}

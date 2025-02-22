@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #1a1a1a; 
+    border-bottom: 2px solid #B89C5C; 
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), 
+                -4px -4px 10px rgba(255, 255, 255, 0.2), 
+                inset 2px 2px 5px rgba(255, 255, 255, 0.3), 
+                inset -2px -2px 5px rgba(0, 0, 0, 0.2);
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 2px solid #B89C5C;
+    width: fit-content;
+}
+
+small {
+    font-size: 14px;
+    color: #B89C5C;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    text-shadow: 0 0 3px rgba(179, 161, 37, 0.5);
+}
+
+.iconoPlus, .iconoMinus {
+    cursor: pointer;
+    filter: drop-shadow(0 0 2px rgba(179, 161, 37, 0.5));
+}
+
+.input {
+    text-align: center;
+    width: 40px;
+    border-radius: 15px;
+    border: 1px solid #B89C5C;
+    background: #1a1a1a;
+    color: #B89C5C;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 0 3px rgba(179, 161, 37, 0.3);
+}
+
+.input:focus {
+    outline: none;
+    border-color: #B89C5C;
+    box-shadow: 0 0 5px rgba(179, 161, 37, 0.5);
+}
+
+.svgContainer {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    border: 0.5px solid #B89C5C;
+    padding: 3px;
+    transition: 0.3s ease-in;
+}
+
+.svgContainer:hover{
+    background-color: #B89C5C;
+}
+
+.sable-laser {
+    fill: #ffffff;
+    transition: fill 0.5s ease-in-out;
+}
+
+.iconoMinus:hover .sable-laser {
+    fill: #df0202;
+    filter: drop-shadow(0 0 3px rgba(139, 0, 0, 0.5));
+}
+
+.iconoPlus:hover .sable-laser {
+    fill: #0076ed;
+    filter: drop-shadow(0 0 3px rgba(0, 51, 102, 0.5));
+}
